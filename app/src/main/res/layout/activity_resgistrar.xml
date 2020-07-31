@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".resgistrar">
+    <TextView
+        android:id="@+id/REgistro"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Registro"
+        android:textAlignment="center"
+        android:textColor="#3C8485"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="Nombre completo "
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numero de carnet"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtndi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnRegistrar2"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="#1EB6A7"
+        android:text="Agregar"
+        android:textColor="#022C27" />
+</LinearLayout>

@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "134282151954",
+    "firebase_url": "https://medican-3e360.firebaseio.com",
+    "project_id": "medican-3e360",
+    "storage_bucket": "medican-3e360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134282151954:android:56a2f82aebf347ff8cf0cb",
+        "android_client_info": {
+          "package_name": "com.example.medican"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134282151954-ge13mtusvrbsqnt7oorbgdjg2b93qmvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medican",
+            "certificate_hash": "7d2de72ab0dfd53f357ce318b83bdd45a1f860b3"
+          }
+        },
+        {
+          "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZVbvtTwbCQZtgb2Rbbkcf_9TLJWDWICU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134282151954:android:d768a18fd17922348cf0cb",
+        "android_client_info": {
+          "package_name": "com.example.medicanpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134282151954-j1imnv4avir5v8o67c3o1rv3u1qsjuhg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medicanpro",
+            "certificate_hash": "7d2de72ab0dfd53f357ce318b83bdd45a1f860b3"
+          }
+        },
+        {
+          "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZVbvtTwbCQZtgb2Rbbkcf_9TLJWDWICU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134282151954:android:4afbde13295937d68cf0cb",
+        "android_client_info": {
+          "package_name": "com.example.medincanprov2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134282151954-j26402h2i428i1vtr7om87l4u8gkn4j8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medincanprov2",
+            "certificate_hash": "7d2de72ab0dfd53f357ce318b83bdd45a1f860b3"
+          }
+        },
+        {
+          "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZVbvtTwbCQZtgb2Rbbkcf_9TLJWDWICU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134282151954-u1saf79o2j93sklras4g615pjs84fo89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

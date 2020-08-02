@@ -89,7 +89,7 @@ public class resgistrar extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else {
-                    dni.setError("su carnet no tiene notiene la cantidad de caracteres   ");
+                    dni.setError("su carnet no tiene  la cantidad de caracteres   ");
                 }
 
             }

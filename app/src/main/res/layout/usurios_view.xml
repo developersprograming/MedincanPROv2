@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -17,13 +17,21 @@
 
             <TextView
                 android:id="@+id/TxtInformacionUSer"
-                android:layout_width="267dp"
-                android:layout_height="42dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textColor="#173042"
                 android:textSize="18sp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FC089398"
+            android:text="Actualizar" />
 
         <Button
             android:id="@+id/BtnVerPerfil"

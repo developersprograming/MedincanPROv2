@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.medincanprov2.ActilizarMEdicamneto;
 import com.example.medincanprov2.MenuUSER;
 import com.example.medincanprov2.R;
 import com.example.medincanprov2.VIewMEdicametosUSER;
@@ -52,6 +53,15 @@ public class UserPacienteAdapters extends RecyclerView.Adapter<UserPacienteAdapt
 
          }
      });
+     holder.bActualizar.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             Context context = v.getContext();
+             Intent intent = new Intent(context, ActilizarMEdicamneto.class);
+             intent.putExtra("Pacinetuser", paciente);
+             context.startActivity(intent);
+         }
+     });
 
     }
 
@@ -62,7 +72,7 @@ public class UserPacienteAdapters extends RecyclerView.Adapter<UserPacienteAdapt
 
     public  class ViewHolder extends RecyclerView.ViewHolder{
         private TextView InformacionUaserPaciete;
-        private Button BotonVerPerfofil;
+        private Button BotonVerPerfofil,bActualizar;
         public View view;
         public ViewHolder(final View view)
         {
@@ -71,6 +81,7 @@ public class UserPacienteAdapters extends RecyclerView.Adapter<UserPacienteAdapt
 
             InformacionUaserPaciete=(TextView) view.findViewById(R.id.TxtInformacionUSer);
             BotonVerPerfofil=(Button)view.findViewById(R.id.BtnVerPerfil);
+            bActualizar=(Button)view.findViewById(R.id.btnUpdate);
 
 
         }

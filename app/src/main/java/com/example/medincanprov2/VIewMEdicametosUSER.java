@@ -45,17 +45,22 @@ public class VIewMEdicametosUSER extends AppCompatActivity {
         mRecyclerView=findViewById(R.id.reciclevieMEdicmetosUSER);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         try {
-          /*  DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-            DatabaseReference ref = database.child("Medicametos");
-            Query UserQuery = ref.orderByChild("idUser").equalTo(user.getId());
+           DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+            DatabaseReference ref = database.child("Medicamentos");
+            Query UserQuery = ref.orderByChild("idUserP").equalTo(paciente.getId());
             UserQuery.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
                         mMedicametos.clear();
                         for (DataSnapshot dtaUser : dataSnapshot.getChildren()) {
-
-                            mMedicametos.add(new Medicamentos("aa","aa" ,"aa","aaa","aaa","aa"));
+                             String id=dtaUser.getKey();
+                             String nombreMEndicament=dtaUser.child("Nombre_MEdicamento").getValue(String.class);
+                            String cantidad=dtaUser.child("Cantidad").getValue(String.class);
+                            String hora=dtaUser.child("Hora").getValue(String.class);
+                            String minuto=dtaUser.child("Minutos").getValue(String.class);
+                            String idUserP=dtaUser.child("idUserP").getValue(String.class);
+                            mMedicametos.add(new Medicamentos(nombreMEndicament,cantidad,hora,minuto,id,idUserP));
                         }
                         mApater = new MedicmetosUserAdapter(mMedicametos, R.layout.user_medicametos_view);
                         mRecyclerView.setAdapter(mApater);
@@ -67,7 +72,7 @@ public class VIewMEdicametosUSER extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            });*/
+            });
 
           agregarM= findViewById(R.id.btnAddMedic);
           agregarM.setOnClickListener(new View.OnClickListener() {

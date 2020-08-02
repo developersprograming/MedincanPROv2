@@ -96,7 +96,7 @@ public class RegistroMEdicametos extends AppCompatActivity {
                             datosUsuarios.put("Hora", hora);
                             datosUsuarios.put("Minutos", minutos);
                             datosUsuarios.put("idUserP", id);
-                            mDatabase.child("Meicametos").push().setValue(datosUsuarios);
+                            mDatabase.child("Medicamentos").push().setValue(datosUsuarios);
                             horayminuto.setText("");
                             horayminuto.setError("Puedes ingresar una nueva hora");
                             mensaje.setText("puedes agregra otra hora para el medicamento");

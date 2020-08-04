@@ -90,13 +90,13 @@ public class RegistroMEdicametos extends AppCompatActivity {
                         else {
 
                             mDatabase = FirebaseDatabase.getInstance().getReference();
-                            Map<String, Object> datosUsuarios = new HashMap<>();
-                            datosUsuarios.put("Nombre_MEdicamento", nombreMedicamento.getText().toString());
-                            datosUsuarios.put("Cantidad", cantidad.getText().toString());
-                            datosUsuarios.put("Hora", hora);
-                            datosUsuarios.put("Minutos", minutos);
-                            datosUsuarios.put("idUserP", id);
-                            mDatabase.child("Medicamentos").push().setValue(datosUsuarios);
+                            Map<String, Object> datosMEdicmetos = new HashMap<>();
+                            datosMEdicmetos.put("Nombre_MEdicamento", nombreMedicamento.getText().toString());
+                            datosMEdicmetos.put("Cantidad", cantidad.getText().toString());
+                            datosMEdicmetos.put("Hora", hora);
+                            datosMEdicmetos.put("Minutos", minutos);
+                            datosMEdicmetos.put("idUserP", id);
+                            mDatabase.child("Medicamentos").push().setValue(datosMEdicmetos);
                             horayminuto.setText("");
                             horayminuto.setError("Puedes ingresar una nueva hora");
                             mensaje.setText("puedes agregra otra hora para el medicamento");

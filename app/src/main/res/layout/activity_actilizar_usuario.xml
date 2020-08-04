@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActilizarMEdicamneto">
+    tools:context=".ActilizarUsuarioP">
+
     <TextView
         android:id="@+id/REgistro"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Registro"
+        android:text="Actualizar Usuario"
         android:textAlignment="center"
         android:textColor="#3C8485"
         android:textIsSelectable="false"

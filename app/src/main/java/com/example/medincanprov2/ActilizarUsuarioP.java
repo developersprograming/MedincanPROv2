@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
- public class ActilizarMEdicamneto extends AppCompatActivity {
+ public class ActilizarUsuarioP extends AppCompatActivity {
      EditText nombreUSer,dni;
      Button update;
      Paciente paciente;
@@ -25,7 +25,7 @@ import java.util.Map;
      @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actilizar_m_edicamneto);
+        setContentView(R.layout.activity_actilizar_usuario);
         nombreUSer= findViewById(R.id.txtnombreuser);
         dni=findViewById(R.id.txtndiUSer);
         update= findViewById(R.id.btnActualizarUausrio);

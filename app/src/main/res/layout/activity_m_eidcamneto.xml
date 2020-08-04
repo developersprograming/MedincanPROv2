@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistroMEdicametos">
+    tools:context=".ActualizarMedicamneto">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="76dp"
+        android:layout_height="wrap_content"
         android:background="#FD149EAF"
-        android:text="Agregar Medicamento"
+        android:text="Actualizacion de  Medicamento"
         android:textAlignment="center"
         android:textColor="#123253"
         android:textSize="36sp" />
@@ -36,7 +36,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtnombreMEcicamento"
+            android:id="@+id/txtnombreMEcicamentoO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,7 +51,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtCantidad"
+            android:id="@+id/txtCantidadd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -66,14 +66,14 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txthorayminuto"
+            android:id="@+id/txthorayminutoo"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:textAlignment="center"
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/btnRelog"
+            android:id="@+id/btnRelogF"
             android:layout_width="match_parent"
             android:layout_height="69dp"
             android:background="#298FA8"
@@ -88,7 +88,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtMEnsaje"
+            android:id="@+id/txtMEnsajee"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:textAlignment="center"
@@ -96,11 +96,11 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btnAddmedicamento"
+            android:id="@+id/btnActualizarMedicamento"
             android:layout_width="match_parent"
             android:layout_height="78dp"
             android:background="#11CCA7"
-            android:text="Agregar"
+            android:text="Actualizar"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 

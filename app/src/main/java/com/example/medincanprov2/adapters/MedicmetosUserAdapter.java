@@ -1,5 +1,7 @@
 package com.example.medincanprov2.adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +11,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.medincanprov2.ActilizarUsuarioP;
+import com.example.medincanprov2.ActualizarMedicamneto;
 import com.example.medincanprov2.R;
 import com.example.medincanprov2.models.Medicamentos;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class MedicmetosUserAdapter extends RecyclerView.Adapter<MedicmetosUserAdapter.ViewHolder> {
+    private DatabaseReference mDatabase;
     private int resource;
     private ArrayList<Medicamentos> MEdicamLIst;
     public MedicmetosUserAdapter(ArrayList<Medicamentos> MEdicamLIst,int resource)
@@ -32,8 +39,24 @@ public class MedicmetosUserAdapter extends RecyclerView.Adapter<MedicmetosUserAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Medicamentos medicamentos=MEdicamLIst.get(position);
-        holder.infomacionMEdicamnetos.setText(medicamentos.getNombreMEdicamento());
+        final Medicamentos medicamentos=MEdicamLIst.get(position);
+        holder.infomacionMEdicamnetos.setText(medicamentos.getNombreMEdicamento() + " con la cantidad "+ medicamentos.getCantidad() +"  a la hora "+medicamentos.getHora()+":"+medicamentos.getMinutos());
+        holder.ver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context,ActualizarMedicamneto.class);
+                intent.putExtra("medicamtos", medicamentos);
+                context.startActivity(intent);
+            }
+        });
+        holder.eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDatabase = FirebaseDatabase.getInstance().getReference("Medicamentos");
+                mDatabase.child(medicamentos.getId()).removeValue();
+            }
+        });
     }
 
     @Override

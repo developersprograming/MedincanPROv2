@@ -42,6 +42,8 @@ public class ActualizarMedicamneto extends AppCompatActivity {
         cantidadcnatidad.setText(medicamentos.getCantidad());
         horayminutiVIen= findViewById(R.id.txthorayminutoo);
         horayminutiVIen.setText(medicamentos.getHora()+":"+medicamentos.getMinutos());
+        hora=medicamentos.getHora();
+        minutos=medicamentos.getMinutos();
         Calendar calendar= Calendar.getInstance();
         final  int hour=calendar.get(Calendar.HOUR_OF_DAY);
         final  int mini=calendar.get(Calendar.MINUTE);

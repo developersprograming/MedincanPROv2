@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".RegistroMEdicametos">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="76dp"
+        android:layout_height="wrap_content"
         android:background="#FD149EAF"
         android:text="Agregar Medicamento"
         android:textAlignment="center"
@@ -20,88 +20,75 @@
     <TextView
         android:id="@+id/textView16"
         android:layout_width="match_parent"
-        android:layout_height="71dp" />
+        android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="415dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:text="Nombre  Medicemto"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/txtnombreMEcicamento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ingrese la cantidad de tabletas tomar por dia el Paciente"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/txtCantidad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:textAlignment="center" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:text="ingrece las horas que tiene que tomar el medicmento"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txthorayminuto"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <Button
-            android:id="@+id/btnRelog"
-            android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:background="#298FA8"
-            android:text="relog"
-            android:textColor="#E4DBDB" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="169dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:text="Nombre  Medicemto"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/txtMEnsaje"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:textAlignment="center"
-            android:textColor="#124F70"
-            android:textSize="18sp" />
+    <EditText
+        android:id="@+id/txtnombreMEcicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnAddmedicamento"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:background="#11CCA7"
-            android:text="Agregar"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ingrese la cantidad de tabletas tomar por dia el Paciente"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ingrece las horas que tiene que tomar el medicmento"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txthorayminuto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnRelog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#298FA8"
+        android:text="relog"
+        android:textColor="#E4DBDB" />
+
+    <TextView
+        android:id="@+id/txtMEnsaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#124F70"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnAddmedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11CCA7"
+        android:text="Agregar"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -11,10 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.medincanprov2.ActilizarUsuarioP;
 import com.example.medincanprov2.ActualizarMedicamneto;
 import com.example.medincanprov2.R;
-import com.example.medincanprov2.models.Medicamentos;
+import com.example.medincanprov2.models.Medicamento;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,8 +22,8 @@ import java.util.ArrayList;
 public class MedicmetosUserAdapter extends RecyclerView.Adapter<MedicmetosUserAdapter.ViewHolder> {
     private DatabaseReference mDatabase;
     private int resource;
-    private ArrayList<Medicamentos> MEdicamLIst;
-    public MedicmetosUserAdapter(ArrayList<Medicamentos> MEdicamLIst,int resource)
+    private ArrayList<Medicamento> MEdicamLIst;
+    public MedicmetosUserAdapter(ArrayList<Medicamento> MEdicamLIst, int resource)
     {
         this.MEdicamLIst=MEdicamLIst;
         this.resource=resource;
@@ -39,7 +38,7 @@ public class MedicmetosUserAdapter extends RecyclerView.Adapter<MedicmetosUserAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Medicamentos medicamentos=MEdicamLIst.get(position);
+        final Medicamento medicamentos=MEdicamLIst.get(position);
         holder.infomacionMEdicamnetos.setText(medicamentos.getNombreMEdicamento() + " con la cantidad "+ medicamentos.getCantidad() +"  a la hora "+medicamentos.getHora()+":"+medicamentos.getMinutos());
         holder.ver.setOnClickListener(new View.OnClickListener() {
             @Override

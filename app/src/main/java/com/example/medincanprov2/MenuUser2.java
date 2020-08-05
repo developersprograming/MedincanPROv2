@@ -13,10 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.medincanprov2.adapters.MedianAdapter;
-import com.example.medincanprov2.adapters.MedicmetosUserAdapter;
-import com.example.medincanprov2.adapters.UserPacienteAdapters;
-import com.example.medincanprov2.models.Medicamentos;
-import com.example.medincanprov2.models.Paciente;
+import com.example.medincanprov2.models.Medicamento;
+import com.example.medincanprov2.models.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,11 +25,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MenuUser2 extends AppCompatActivity {
-    User user;
+    Usuario user;
     TextView nombre;
     TextView nombrep;
     Button agregarM;
-    private ArrayList<Medicamentos> mMedicametos = new ArrayList<>();
+    private ArrayList<Medicamento> mMedicametos = new ArrayList<>();
     private MedianAdapter mApater;
     private RecyclerView mRecyclerView;
     @Override
@@ -39,8 +37,9 @@ public class MenuUser2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_user2);
         nombre= findViewById(R.id.txtnombre);
-        Intent mIntent = getIntent();
-        user = (User) mIntent.getParcelableExtra("Usurper");
+
+        user = DataSet.getInstance().getCurrentUser();
+
         Log.i(String.valueOf(this), user.getId());
         nombre.setText(user.getNomnbre());
      ///  bd figuras
@@ -62,7 +61,7 @@ public class MenuUser2 extends AppCompatActivity {
                                     String hora=dbMedicamnetos.child("Hora").getValue(String.class);
                                     String minuto=dbMedicamnetos.child("Minutos").getValue(String.class);
                                     String idUserP=dbMedicamnetos.child("idUserP").getValue(String.class);
-                                    mMedicametos.add(new Medicamentos(nombreMEndicament,cantidad,hora,minuto,id,idUserP));
+                                    mMedicametos.add(new Medicamento(nombreMEndicament,cantidad,hora,minuto,id,idUserP));
                                 }
                                 mApater = new MedianAdapter(mMedicametos, R.layout.medicametos_view);
                                 mRecyclerView.setAdapter(mApater);

@@ -13,8 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.medincanprov2.adapters.MedicmetosUserAdapter;
-import com.example.medincanprov2.adapters.UserPacienteAdapters;
-import com.example.medincanprov2.models.Medicamentos;
+import com.example.medincanprov2.models.Medicamento;
 import com.example.medincanprov2.models.Paciente;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,7 +29,7 @@ public class VIewMEdicametosUSER extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     TextView nombrep;
     Button agregarM;
-    private ArrayList<Medicamentos> mMedicametos = new ArrayList<>();
+    private ArrayList<Medicamento> mMedicametos = new ArrayList<>();
     Paciente paciente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class VIewMEdicametosUSER extends AppCompatActivity {
                             String hora=dtaUser.child("Hora").getValue(String.class);
                             String minuto=dtaUser.child("Minutos").getValue(String.class);
                             String idUserP=dtaUser.child("idUserP").getValue(String.class);
-                            mMedicametos.add(new Medicamentos(nombreMEndicament,cantidad,hora,minuto,id,idUserP));
+                            mMedicametos.add(new Medicamento(nombreMEndicament,cantidad,hora,minuto,id,idUserP));
                         }
                         mApater = new MedicmetosUserAdapter(mMedicametos, R.layout.user_medicametos_view);
                         mRecyclerView.setAdapter(mApater);

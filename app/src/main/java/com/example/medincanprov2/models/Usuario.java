@@ -2,21 +2,19 @@ package com.example.medincanprov2.models;
 
 import java.io.Serializable;
 
-public class Paciente implements Serializable {
+public class Usuario {
     private String nomnbre;
     private String estado;
     private String id;
     private String dni;
-    private String idUSer;
 
-    public Paciente() {}
+    public Usuario() {}
 
-    public Paciente(String nomnbre, String estado, String id, String dni, String idUSer) {
+    public Usuario(String nomnbre, String estado, String id, String dni) {
         this.nomnbre = nomnbre;
         this.estado = estado;
         this.id = id;
         this.dni = dni;
-        this.idUSer = idUSer;
     }
 
     public String getNomnbre() {
@@ -49,14 +47,6 @@ public class Paciente implements Serializable {
 
     public void setDni(String dni) {
         this.dni = dni;
-    }
-
-    public String getIdUSer() {
-        return idUSer;
-    }
-
-    public void setIdUSer(String idUSer) {
-        this.idUSer = idUSer;
     }
 
 }

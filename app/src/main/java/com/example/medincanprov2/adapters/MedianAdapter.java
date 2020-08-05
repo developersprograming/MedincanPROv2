@@ -5,7 +5,6 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,17 +12,16 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.medincanprov2.R;
-import com.example.medincanprov2.models.Medicamentos;
-import com.example.medincanprov2.models.Paciente;
+import com.example.medincanprov2.models.Medicamento;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class MedianAdapter extends RecyclerView.Adapter<MedianAdapter.ViewHolder> {
     private int resource;
-    private ArrayList<Medicamentos> MEdicamLIst;
+    private ArrayList<Medicamento> MEdicamLIst;
 
-    public MedianAdapter(ArrayList<Medicamentos> MEdicamLIst,int resource)
+    public MedianAdapter(ArrayList<Medicamento> MEdicamLIst, int resource)
     {
         this.MEdicamLIst=MEdicamLIst;
         this.resource=resource;
@@ -38,7 +36,7 @@ public class MedianAdapter extends RecyclerView.Adapter<MedianAdapter.ViewHolder
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-         Medicamentos medicamentos=MEdicamLIst.get(position);
+         Medicamento medicamentos=MEdicamLIst.get(position);
          Random random = new Random();
          int r= random.nextInt(255);
         int g = random.nextInt(255);

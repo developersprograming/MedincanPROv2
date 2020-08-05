@@ -13,8 +13,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.medincanprov2.models.Medicamentos;
-import com.example.medincanprov2.models.Paciente;
+import com.example.medincanprov2.models.Medicamento;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,14 +27,14 @@ public class ActualizarMedicamneto extends AppCompatActivity {
     Context mContex=this;
   Button btnrelo2,updateremedicamneto;
     String hora,minutos;
-    Medicamentos medicamentos;
+    Medicamento medicamentos;
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_m_eidcamneto);
         Intent mIntent = getIntent();
-        medicamentos = (Medicamentos) mIntent.getParcelableExtra("medicamtos");
+        medicamentos = (Medicamento) mIntent.getParcelableExtra("medicamtos");
         nombremedicamento = findViewById(R.id.txtnombreMEcicamentoO);
         cantidadcnatidad= findViewById(R.id.txtCantidadd);
         nombremedicamento.setText(medicamentos.getNombreMEdicamento());
